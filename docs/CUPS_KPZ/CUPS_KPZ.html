@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css" /><script type="text/javascript">window.onload = function(){var mathElements = document.getElementsByClassName("math");
+  for (var i=0; i < mathElements.length; i++)
+  {
+   var texText = mathElements[i].firstChild
+   katex.render(texText.data, mathElements[i])
+  }}
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section><section id="ubiquitous-kpz" class="titleslide slide level1"><h1>Ubiquitous KPZ</h1></section><section class="slide level2">
+
+<video data-autoplay class="stretch" data-src="assets/Supplemental_Video_2.avi">
+</video>
+</section><section id="the-kpz-equation" class="slide level2">
+<h1>The KPZ Equation</h1>
+<p><span class="math display">\displaystyle 
+\frac{\partial h}{\partial t} = \nu\frac{\partial^2 h}{\partial x^2} + \frac{\lambda}{2}\left(\frac{\partial h}{\partial x}\right)^2 + \xi(x,t)
+</span></p>
+</section><section id="happy-birthday-kpz" class="slide level2">
+<h1>Happy Birthday KPZ</h1>
+<figure>
+<img src="assets/KPZ_paper.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/Cake.jpg" />
+</figure>
+</section><section id="growing-interfaces" class="slide level2">
+<h1>Growing Interfaces</h1>
+<figure>
+<img src="assets/ColourKPZ.png" />
+</figure>
+</section><section class="slide level2">
+
+<p><span class="math display">\displaystyle 
+\frac{\partial h}{\partial t} = \nu\frac{\partial^2 h}{\partial x^2} + \frac{\lambda}{2}\left(\frac{\partial h}{\partial x}\right)^2 + \xi(x,t)
+</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\nu\partial_x^2 h</span> describes <strong>diffusion</strong>.</li>
+<li class="fragment"><span class="math inline">\xi(x,t)</span> is <strong>noise</strong>.</li>
+<li class="fragment">What about <span class="math inline">\frac{\lambda}{2}(\partial_x h)^2</span>? Who ordered that?</li>
+</ul>
+</section><section id="the-nonlinear-term" class="slide level2">
+<h1>The Nonlinear Term</h1>
+<figure>
+<img src="assets/NonlinearTerm.png" />
+</figure>
+<p>Adding material at rate <span class="math inline">v</span> to the surface causes it to rise by</p>
+<p><span class="math display">\displaystyle 
+v\delta t\sqrt{1+(\partial_x h)^2}
+</span></p>
+<p>in time <span class="math inline">\delta t</span></p>
+</section><section id="experiment" class="slide level2">
+<h1>Experiment</h1>
+<video data-autoplay class="stretch" src="assets/srep00034-s3.mov">
+</video>
+<p>Turbulent liquid crystals. Takeuchi &amp; Sano, 2010</p>
+</section><section id="other-systems" class="slide level2">
+<h1>Other Systems</h1>
+<ul>
+<li class="fragment"><p>KPZ used to describe bacterial colony growth, flame propagation, etc.</p></li>
+<li class="fragment"><p>The physics of each situation seems different.</p></li>
+<li class="fragment"><p>What do we mean to say that each is <em>described</em> by KPZ?</p></li>
+</ul>
+</section></section>
+<section><section id="statistical-physics" class="titleslide slide level1"><h1>Statistical Physics</h1></section><section id="the-big-idea" class="slide level2">
+<h1> The Big Idea</h1>
+<ul>
+<li class="fragment"><p>How do we understand <em>macroscopic</em> matter in terms of <em>microscopic</em> constituents?</p></li>
+<li class="fragment"><p>Talking about a uniform <em>state of matter</em> requires that widely separated regions are nearly independent.</p></li>
+<li class="fragment"><p><em>Living matter</em> is quite different in this respect.</p></li>
+</ul>
+</section><section id="a-phase-diagram" class="slide level2">
+<h1>A Phase Diagram</h1>
+<figure>
+<img src="assets/Phase-diag2.png" />
+</figure>
+</section><section id="critical-point" class="slide level2">
+<h1>Critical Point</h1>
+<figure>
+<img src="assets/CriticalPointMeasurementEthane.jpg" />
+</figure>
+</section><section id="lattice-gas" class="slide level2">
+<h1> Lattice Gas</h1>
+<figure>
+<img src="assets/LatticeGas.gif" />
+</figure>
+</section><section id="ising-model" class="slide level2">
+<h1>Ising Model</h1>
+<p><span class="math display">\displaystyle 
+H = -J\sum_{\langle j\,k\rangle} \sigma_j \sigma_k + h \sum_j \sigma_j,\qquad \sigma_j = \pm 1
+</span></p>
+<figure>
+<img src="assets/ising_model.svg" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/IsingPhase.gif" />
+</figure>
+</section><section class="slide level2">
+
+<video data-autoplay class="stretch" data-src="assets/ising.mp4">
+</video>
+</section><section id="at-critical-point" class="slide level2">
+<h1> At Critical Point</h1>
+<ul>
+<li class="fragment">System is <strong>scale invariant</strong> (a fractal).</li>
+<li class="fragment">Correlation function is power law <span class="math display">\displaystyle 
+  \langle \sigma(\mathbf{x})\sigma(\mathbf{y})\rangle = \frac{1}{|\mathbf{x}-\mathbf{y}|^\eta}, \qquad |\mathbf{x}-\mathbf{y}| \to \infty
+  </span></li>
+<li class="fragment"><span class="math inline">\eta</span> is a <strong>critical exponent</strong></li>
+<li class="fragment">Exact solution in 2D: <span class="math inline">\eta=1/4</span>.</li>
+<li class="fragment">No exact solution in 3D.</li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/IsingCrit.gif" />
+</figure>
+</section><section id="universality" class="slide level2">
+<h1>Universality</h1>
+<ul>
+<li class="fragment">Ising model is clearly ridiculously oversimplified.</li>
+<li class="fragment">Why don’t we study more complicated models?</li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/2_phase_diagram.png" />
+</figure>
+<ul>
+<li class="fragment">Near the critical point, the physics is the same!</li>
+<li class="fragment">More precisely, critical exponents coincide.</li>
+</ul>
+</section><section id="random-walk" class="slide level2">
+<h1>Random Walk</h1>
+<figure>
+<img src="assets/RandomWalk.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/Random_walk_25000.svg" />
+</figure>
+</section><section id="heat-equation" class="slide level2">
+<h1>Heat Equation</h1>
+<p><span class="math display">\displaystyle 
+  \frac{\partial \phi}{\partial t} = D \frac{\partial^2 \phi}{\partial x^2}
+  </span></p>
+<p>Equation ‘smoothes’ <span class="math inline">\phi(x,t)</span></p>
+<figure>
+<img src="assets/Heat_eqn.gif" />
+</figure>
+</section><section id="at-long-times" class="slide level2">
+<h1>At Long Times…</h1>
+<p><span class="math display">\displaystyle 
+\phi(x,t)\longrightarrow \frac{\phi_0}{\sqrt{t}} \exp\left(-\frac{x^2}{4Dt}\right)
+</span></p>
+<p>…no matter what you start with!</p>
+<ul>
+<li class="fragment">Shows key property of diffusion that <span class="math inline">x\sim \sqrt{t}</span></li>
+<li class="fragment"><span class="math inline">T \sim L^z</span> with <strong>dynamical critical exponent</strong> <span class="math inline">z=2</span>.</li>
+<li class="fragment">This wouldn’t be changed if we added terms with more derivatives e.g. <span class="math inline">\frac{\partial^4 \phi}{\partial x^4}</span>.</li>
+</ul>
+</section><section id="scaling-for-kpz" class="slide level2">
+<h1>Scaling for KPZ</h1>
+<figure>
+<img src="assets/GrowingInterface.png" />
+</figure>
+<p><span class="math display">\displaystyle 
+h(x,t) - vt \sim t^{1/3}
+</span></p>
+<ul>
+<li class="fragment">Spatial scale of fluctuations is <span class="math inline">L\sim t^{2/3}</span>, so <span class="math inline">z=3/2</span></li>
+<li class="fragment">Different from diffusion, but <strong>universal</strong>.</li>
+</ul>
+</section></section>
+<section><section id="more-connections" class="titleslide slide level1"><h1>More Connections</h1></section><section id="traffic" class="slide level2">
+<h1>Traffic</h1>
+<ul>
+<li class="fragment">From a theorist’s viewpoint!</li>
+<li class="fragment">Particles on sites, one per site.</li>
+<li class="fragment"><p>Particles hop to right with some rate, if they can.</p>
+<figure>
+<img src="assets/TASEP.jpg" />
+</figure></li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/ribo.png" />
+</figure>
+</section><section class="slide level2">
+
+<p>From hops to heights…</p>
+<figure>
+<img src="assets/TASEPHeights.png" />
+</figure>
+<p><span class="math display">\displaystyle 
+\frac{\partial h}{\partial x} = \frac{1}{2}-\rho
+</span></p>
+</section><section id="hydrodynamics" class="slide level2">
+<h1>Hydrodynamics</h1>
+<figure>
+<img src="assets/Jam.png" />
+</figure>
+</section><section class="slide level2">
+
+<p>Think in terms of local <strong>density</strong> <span class="math inline">\rho(x,t)</span> and current <span class="math inline">j(x,t)</span>.</p>
+<ul>
+<li class="fragment"><p>They obey the <strong>continuity equation</strong></p>
+<p><span class="math display">\displaystyle 
+\frac{\partial \rho}{\partial t} = - \frac{\partial j}{\partial x}
+</span></p></li>
+<li class="fragment"><p>Velocity <span class="math inline">v\propto (1-\rho)</span>, so</p>
+<p><span class="math display">\displaystyle 
+j = \rho v = \rho(1-\rho)
+</span></p></li>
+<li class="fragment"><p>Putting it together gives <strong>Burgers’ equation</strong></p>
+<p><span class="math display">\displaystyle 
+\frac{\partial \rho}{\partial t} = - \frac{\partial}{\partial x}\rho(1-\rho)
+</span></p></li>
+</ul>
+</section><section class="slide level2">
+
+<p><span class="math display">\displaystyle 
+\frac{\partial \rho}{\partial t} = - \frac{\partial}{\partial x}\rho(1-\rho)
+</span></p>
+<ul>
+<li class="fragment"><p>As we saw, <span class="math inline">\rho-\frac{1}{2}=\frac{\partial h}{\partial x}</span>, so this is</p>
+<p><span class="math display">\displaystyle 
+\frac{\partial h}{\partial t} = \frac{\partial h}{\partial x} + \left(\frac{\partial h}{\partial x}\right)^2
+</span></p></li>
+<li class="fragment"><p>Compare KPZ</p>
+<p><span class="math display">\displaystyle 
+\frac{\partial h}{\partial t} =  \frac{\lambda}{2}\left(\frac{\partial h}{\partial x}\right)^2 + \nu\frac{\partial^2 h}{\partial x^2} + \xi(x,t)
+</span></p></li>
+<li class="fragment"><p>Noise and diffusion are higher order effects</p></li>
+</ul>
+</section><section id="polynuclear-growth" class="slide level2">
+<h1>Polynuclear Growth</h1>
+<figure>
+<img src="assets/PNGNucleation.png" />
+</figure>
+</section><section class="slide level2">
+
+<video data-autoplay class="stretch" data-src="assets/PNG.mp4">
+</video>
+</section><section id="spacetime-view" class="slide level2">
+<h1>Spacetime View</h1>
+<figure>
+<img src="assets/PNGTerraces.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/StepsPolymer.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/DirectedPolymer.png" />
+</figure>
+<ul>
+<li class="fragment"><p>Polymer is stretched out in <span class="math inline">(1,1)</span> direction, but attracted to points.</p></li>
+<li class="fragment"><p>Wants to maximize number visited, subject to moving up and to the right.</p></li>
+</ul>
+</section><section class="slide level2">
+
+<p>This is the <strong>directed polymer in a random potential</strong>. It’s equivalent to KPZ!</p>
+</section><section id="wandering" class="slide level2">
+<h1>Wandering</h1>
+<figure>
+<img src="assets/Paths.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/50free_ends.png" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/Scaled.png" />
+</figure>
+<p>Remember <span class="math inline">T \sim L^z</span>. Here <span class="math inline">T = x+y</span>, <span class="math inline">L=x-y</span>, so <span class="math inline">z=3/2</span></p>
+</section><section id="geodesics" class="slide level2">
+<h1>Geodesics</h1>
+<figure>
+<img src="assets/GeodesicBalls.png" />
+</figure>
+<ul>
+<li class="fragment">Model for propagation of light in random refractive index, or fluctuating spacetime geometry.</li>
+</ul>
+</section></section>
+<section><section id="solving-the-kpz-equation" class="titleslide slide level1"><h1>Solving the KPZ Equation</h1></section><section id="can-we-solve-kpz" class="slide level2">
+<h1>Can We Solve KPZ?</h1>
+<ul>
+<li class="fragment"><p>This means: calculate the statistical properties exactly</p></li>
+<li class="fragment"><p><strong>Nope</strong></p></li>
+<li class="fragment"><p>Actually, it’s a struggle to <em>define</em> it!</p></li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/Martin.gif" />
+</figure>
+<p><strong>Martin Hairer</strong> won the Fields medal in 2014 for giving precise <strong>meaning</strong> to the KPZ equation.</p>
+<ul>
+<li class="fragment"><p>Thus we resort to <strong>models</strong>. If we believe that scaling behaviour is insensitive to details of system, we are free to choose!</p></li>
+<li class="fragment"><p>Such models have played a <strong>vital role</strong> in our understanding of critical phenomena.</p></li>
+</ul>
+</section><section class="slide level2">
+
+<video data-autoplay class="stretch" data-src="https://physics.aps.org/assets/70895a19-0bf0-42a8-86fb-5255c3647829/video1.mp4">
+</video>
+</section><section class="slide level2">
+
+<p>Back to directed polymer</p>
+<figure>
+<img src="assets/DirectedPolymer.png" />
+</figure>
+</section><section class="slide level2">
+
+<p>Permutation <span class="math inline">(23154)</span></p>
+<figure>
+<img src="assets/RandomPermutation.png" />
+</figure>
+<p><strong>Longest increasting subsequences</strong> are <span class="math inline">(2,3,5)</span> and <span class="math inline">(2,3,4)</span>.</p>
+</section><section class="slide level2">
+
+<p>The fluctuations of <strong>height</strong> of a KPZ surface, or of the energy of a <strong>random polymer</strong>, are equivalent to the statistics of the longest increasing subsequence of a <strong>random permutation</strong>!</p>
+<ul>
+<li class="fragment">Statistical physics reduced to <strong>combinatorics</strong>.</li>
+</ul>
+</section><section id="effect-of-geometry" class="slide level2">
+<h1>Effect of Geometry</h1>
+<video data-autoplay class="stretch" src="assets/srep00034-s3.mov">
+</video>
+</section><section class="slide level2">
+
+<video data-autoplay class="stretch" src="assets/srep00034-s2.mov">
+</video>
+</section><section class="slide level2">
+
+<figure>
+<img src="assets/RoundVsFlat.png" />
+</figure>
+<ul>
+<li class="fragment">Exact solution describe different probability distributions.</li>
+<li class="fragment">Same <span class="math inline">h(x,t) - vt \sim t^{1/3}</span> scaling.</li>
+</ul>
+</section></section>
+<section><section id="what-dont-we-know" class="titleslide slide level1"><h1>What Don’t We Know?</h1></section><section class="slide level2">
+
+<ul>
+<li class="fragment"><p>Almost anything about higher dimensions (e.g. growth on a 2D interface). Critical exponents and scaling functions.</p></li>
+<li class="fragment"><p>A rough-to-smooth phase transition?</p></li>
+<li class="fragment"><p>Any generalization of the ‘tricks’ (e.g. random permutation) used in 1D.</p></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
